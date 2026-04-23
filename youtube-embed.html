@@ -1,23 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-   <meta name="Referrer-Policy" content="strict-origin-when-cross-origin" />
-  <title>YouTube Embed Relay</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fullscreen Video</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: black;
+    }
+
+    #player {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+
   <iframe
-  id="player"
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
-  title="YouTube video player"
-  frameborder="0"
-  allow="autoplay; encrypted-media"
-  allowfullscreen
-  referrerpolicy="strict-origin-when-cross-origin"
-></iframe>
+    id="player"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+    allow="autoplay; fullscreen; encrypted-media"
+    allowfullscreen>
+  </iframe>
+
 </body>
 </html>
