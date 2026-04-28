@@ -27,10 +27,19 @@
 
   <iframe
     id="player"
-    src="https://www.youtube.com/embed/HDPzEdLtBr8?autoplay=1&mute=1"
     allow="autoplay; fullscreen; encrypted-media"
     allowfullscreen>
   </iframe>
+
+  <script>
+    // Get videoId from URL
+    const params = new URLSearchParams(window.location.search);
+    const videoId = params.get("videoId") || "HDPzEdLtBr8"; // fallback
+
+    // Set iframe src
+    const player = document.getElementById("player");
+    player.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`;
+  </script>
 
 </body>
 </html>
